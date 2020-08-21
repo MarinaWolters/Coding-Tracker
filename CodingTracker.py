@@ -8,8 +8,8 @@ for sure will give comfort and confidence to accomplish more.
 
 So, this program prompts the user to start practicing, calculates how long the practice
 lasted, and what was accomplished on a 100h scale.
-The program also asks the user if she/he wants to keep or dismiss the record from the
-practice to prevent fail positive in case the user forgot to stop the timer.
+The program also asks the user if she/he wants to keep or dismiss the record from the practice to help user keep the clean record and 
+help in situations where user forgot to stop the timer or just want to dismiss the latest practice.
 """
 
 import time
@@ -51,15 +51,10 @@ def practice_python_for_100h():
         if record == 'y':
             more_to_go = int(practice_goal - time_practiced)
             practice_goal = more_to_go
-            #else:
-        #more_to_go = int(practice_goal - time_practiced)
-        #practice_goal = more_to_go
         if practice_goal <= 0:
             break
         print("\nYou have " + format_timespan(practice_goal) + " more to go.")
     return practice_goal
-
-
 
 if __name__ == '__main__':
     main()
